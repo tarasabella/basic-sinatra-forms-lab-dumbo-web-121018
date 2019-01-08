@@ -14,14 +14,7 @@ class App < Sinatra::Base
   post '/food' do
     params.to_s
   end
-  
-  post '/food' do
-    "My name is #{params[:name]}, and I love #{params[:favorite_food]}"
-  end
-end
 
-
-  
 
   post '/team' do
     erb params[:team].to_sym
