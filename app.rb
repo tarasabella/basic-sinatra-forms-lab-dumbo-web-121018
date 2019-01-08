@@ -10,6 +10,7 @@ class App < Sinatra::Base
   post '/:team' do
     erb :team
   end
+  
   post '/team' do
     erb params[:team].to_sym
   end
