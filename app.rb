@@ -3,15 +3,14 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
 
-  get '/food_form' do
-    erb :food_form
+   get '/new_team' do
+    erb :index
   end
 
-
-  post '/food' do
-    
-  end 
- 
+  post '/:team' do
+    erb :team
+  end
+  
   post '/food' do
     params.to_s
   end
@@ -23,15 +22,7 @@ end
 
 
   
-   get '/new_team' do
-    erb :index
-  end
 
-
-  post '/:team' do
-    erb :team
-  end
-  
   post '/team' do
     erb params[:team].to_sym
   end
