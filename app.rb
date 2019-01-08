@@ -2,12 +2,12 @@ require 'sinatra/base'
 
 class App < Sinatra::Base
   
-   get '/' do
+   get '/new_team' do
     erb :index
   end
 
-  get '/:newteam' do
-    erb params[:new_team].to_sym
+  post '/team' do
+    erb params[:team].to_sym
   end
 
   post '/:team' do
